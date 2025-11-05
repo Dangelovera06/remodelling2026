@@ -26,7 +26,7 @@ export default function Landing() {
           </div>
 
           {/* Offer Text - Center */}
-          <div className="hidden md:block text-xs sm:text-sm font-normal tracking-widest text-white/60 uppercase">
+          <div className="hidden md:block text-xs sm:text-sm font-bold tracking-widest text-white/60 uppercase">
             This Offer Will Close
           </div>
 
