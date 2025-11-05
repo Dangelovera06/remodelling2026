@@ -79,7 +79,7 @@ export default function Hero() {
             <img 
               src="/Momoento Perfom.png" 
               alt="Performance Results" 
-              className="w-full h-auto"
+              className="w-full h-auto rounded-2xl shadow-[0_0_40px_rgba(0,110,255,0.4),0_0_80px_rgba(0,110,255,0.2)]"
             />
           </motion.div>
         </div>
