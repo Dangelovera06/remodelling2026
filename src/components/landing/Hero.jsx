@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Clock, Video } from "lucide-react";
 import { BeamsBackground } from "@/components/ui/beams-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import PricingBadge from './PricingBadge';
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 31, seconds: 59 });
@@ -117,39 +115,6 @@ export default function Hero() {
               <span className="font-extrabold tabular-nums bg-gradient-to-r from-[#006eff] via-white to-[#006eff] bg-clip-text text-transparent">
                 {formatTime()}
               </span>
-            </div>
-          </motion.div>
-
-          {/* Pricing Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mb-6 md:mb-8"
-          >
-            <PricingBadge />
-          </motion.div>
-
-          {/* Quick Start Feature - No Boxes */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="mb-6 md:mb-8 px-4"
-          >
-            <div className="flex items-center justify-center gap-6 sm:gap-8 max-w-3xl mx-auto">
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-[#006eff]" />
-                <div className="font-bold text-sm sm:text-base md:text-lg text-white">
-                  Launch in 30 Days
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <Video className="w-5 h-5 sm:w-6 sm:h-6 text-[#006eff]" />
-                <div className="font-bold text-sm sm:text-base md:text-lg text-white">
-                  Fully Done-For-You
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
