@@ -87,7 +87,7 @@ export default function Blueprint() {
             target="_blank"
             rel="noopener noreferrer"
             className="relative inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#0080ff] via-[#006eff] to-[#0050cc] text-white font-bold text-lg transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,110,255,0.5),0_0_40px_rgba(0,110,255,0.3),0_0_60px_rgba(0,110,255,0.2)]"
-            style="width: 397.2px; height: 62.4px; max-width: 100%;"
+            style={{ width: '397.2px', height: '62.4px', maxWidth: '100%' }}
           >
             <span 
               className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-white/20 via-transparent to-transparent"
