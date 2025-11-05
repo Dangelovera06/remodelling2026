@@ -13,27 +13,13 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] uppercase tracking-wider text-white/70 ring-1 ring-white/10 backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#006eff]/70" /> Full-Service Monetization
-            </span>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-white/90">
-              Turn Your{' '}
-              <span className="bg-gradient-to-r from-[#006eff] via-white to-[#006eff] bg-clip-text text-transparent">
-                Social Media Audience
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+              Turn Your Audience Into a{' '}
+              <span className="bg-gradient-to-r from-[#006eff] via-[#0080ff] to-[#006eff] bg-clip-text text-transparent">
+                Revenue Machine
               </span>
-              {' '}Into Revenue
-            </div>
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-              We Build Your Course, Sales Funnel & Everything You Need to Monetize Your Knowledge A-Z
             </h1>
           </motion.div>
           
@@ -41,9 +27,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mx-auto mt-5 max-w-2xl text-balance text-lg text-white/80 md:text-xl"
+            className="mx-auto mt-6 max-w-3xl text-balance text-xl text-white/80 md:text-2xl"
           >
-            Done-for-you course creation, sales funnels, email automation, and launch strategy — We handle everything so you can focus on your audience
+            We build your course, sales funnel, and everything you need to monetize your knowledge — fully done-for-you
           </motion.p>
 
           {/* Placeholder Section */}
