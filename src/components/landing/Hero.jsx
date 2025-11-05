@@ -18,15 +18,16 @@ export default function Hero() {
           >
                       <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight px-2">
                         We Build Your{' '}
-                        <span className="relative inline-block bg-gradient-to-r from-[#006eff] via-[#4da6ff] to-[#006eff] bg-clip-text text-transparent" style={{ textShadow: '0 0 20px rgba(0,110,255,0.4)' }}>
-                          <span className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-transparent bg-clip-text text-transparent"></span>
+                        <span className="relative inline-block overflow-hidden bg-gradient-to-r from-[#006eff] via-[#0080ff] to-[#006eff] bg-clip-text text-transparent">
+                          <span className="absolute inset-0 translate-x-[20%] bg-gradient-to-r from-transparent via-white/40 to-transparent bg-clip-text text-transparent" style={{ width: '60%' }}></span>
                           Course, Sales Funnel & Complete
                         </span>
                         {' '}Monetization System
                       </h1>
 
                       <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light px-2">
-                        <span className="bg-gradient-to-r from-[#006eff] via-[#4da6ff] to-[#006eff] bg-clip-text text-transparent">
+                        <span className="relative inline-block overflow-hidden bg-gradient-to-r from-[#006eff] via-[#0080ff] to-[#006eff] bg-clip-text text-transparent">
+                          <span className="absolute inset-0 translate-x-[20%] bg-gradient-to-r from-transparent via-white/40 to-transparent bg-clip-text text-transparent" style={{ width: '60%' }}></span>
                           (without needing tech skills or marketing experience)
                         </span>
                       </p>
