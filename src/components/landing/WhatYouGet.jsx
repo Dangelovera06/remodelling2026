@@ -3,12 +3,34 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, Gift } from "lucide-react";
 
 const sprintFeatures = [
-  "Complete course content creation & structuring",
-  "High-converting sales funnel design & setup",
-  "Email automation & nurture sequences",
-  "Payment processing & member area setup",
-  "Launch strategy & marketing materials",
-  "Ongoing support until your first $10K in sales"
+  {
+    title: "10 Cinematic Short-Form Videos/Month",
+    description: "Shot + edited with proven scripts that turn scrolls into calls."
+  },
+  {
+    title: "High-Converting Ads Management",
+    description: "Built from Day 1 to generate qualified leads (not likes), tracked weekly."
+  },
+  {
+    title: "Custom-Built Landing Page Funnel",
+    description: "Branded, optimized for conversion, and integrated with backend tools."
+  },
+  {
+    title: "Automated AI Caller (Inbound + Outbound)",
+    description: "Instantly answers inquiries, follows up leads, and books appointments for you."
+  },
+  {
+    title: "Appointment Pre-Qual & Booking System",
+    description: "Every lead is filtered and booked using custom scripts, SOPs, and AI tools."
+  },
+  {
+    title: "Custom SOP Guide for Front Desk & Follow-Up",
+    description: "Your team knows exactly how to nurture and convert — with zero confusion."
+  },
+  {
+    title: "P1 Concierge Support",
+    description: "Slack access + biweekly strategy calls + weekly KPI reports."
+  }
 ];
 
 export default function WhatYouGet() {
@@ -29,8 +51,11 @@ export default function WhatYouGet() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 px-4 text-white">
-            Everything You Need to Monetize Your Audience
+            Everything You Need to Dominate Your Market
           </h2>
+          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto px-4">
+            A complete done-for-you system that generates qualified leads while you focus on closing deals
+          </p>
         </motion.div>
 
         {/* Sprint Features */}
@@ -42,7 +67,7 @@ export default function WhatYouGet() {
           className="mb-12 md:mb-16"
         >
           <div className="p-6 md:p-8 rounded-2xl bg-white/[0.03] border border-white/10">
-            <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid gap-4 md:gap-6">
               {sprintFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -50,12 +75,17 @@ export default function WhatYouGet() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="flex items-start gap-3"
+                  className="flex items-start gap-4 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-[#006eff]/30 transition-all"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-base md:text-lg text-white/90 font-medium leading-relaxed">
-                    {feature}
-                  </p>
+                  <CheckCircle2 className="w-6 h-6 text-[#006eff] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-lg md:text-xl text-white font-bold leading-relaxed mb-2">
+                      {feature.title}
+                    </p>
+                    <p className="text-base md:text-lg text-white/70 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>

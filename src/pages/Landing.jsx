@@ -20,13 +20,12 @@ export default function Landing() {
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4 gap-4">
           {/* Logo and Name - Left */}
           <div className="flex items-center gap-1.5">
-            <img src="/Max Sized Momento.png" alt="Momento" className="h-8 w-auto sm:h-10 md:h-12" />
-            <span className="text-lg sm:text-xl md:text-2xl font-normal tracking-wide text-white">Momento</span>
+            <span className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide text-white">P<span className="text-[#006eff]">1</span> Creative</span>
           </div>
 
           {/* Offer Text - Center */}
           <div className="hidden md:block text-xs sm:text-sm font-bold tracking-widest text-white/60 uppercase">
-            This Offer Will Close
+            Limited Spots Available
           </div>
 
           {/* CTA Button - Right */}
@@ -61,10 +60,10 @@ export default function Landing() {
       <footer className="py-8 sm:py-12 w-full border-t border-white/10 bg-neutral-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-xl sm:text-2xl mb-3 sm:mb-4 font-display font-bold text-white">
-            Momento
+            P<span className="text-[#006eff]">1</span> Creative
           </div>
           <p className="text-xs sm:text-sm mb-6 sm:mb-8 text-white/60">
-            Turning your audience into a profitable business
+            Turning businesses into lead-generating machines
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
             <a href="#" className="text-xs sm:text-sm text-white/60 transition-colors hover:text-white">Privacy Policy</a>
@@ -72,7 +71,7 @@ export default function Landing() {
             <a href="#" className="text-xs sm:text-sm text-white/60 transition-colors hover:text-white">Contact</a>
           </div>
           <div className="text-xs uppercase tracking-wider text-white/40">
-            © 2025 Momento. All rights reserved.
+            © 2025 P1 Creative. All rights reserved.
           </div>
         </div>
       </footer>

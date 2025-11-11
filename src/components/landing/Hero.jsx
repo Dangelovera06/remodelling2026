@@ -17,21 +17,21 @@ export default function Hero() {
             className="space-y-6"
           >
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight px-2">
-              From Content Creator to{' '}
+              Turn Your Business Into a{' '}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#006eff] via-white/90 to-[#0080ff]">
-                Six-Figure Business Owner
+                Lead-Generating Machine
               </span>{' '}
               in 30 Days
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl font-light px-2 text-white/80">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#006eff] via-white/90 to-[#0080ff]">
-                (without needing tech skills or marketing experience)
+                Cinematic Content + High-Converting Ads + AI-Powered Follow-Up = Qualified Leads on Autopilot
               </span>
             </p>
 
             <p className="text-base sm:text-lg md:text-xl text-white/90 pt-2 px-2 font-medium">
-              If you don't make money, we don't get paid — simple as that
+              Done-for-you marketing system that fills your calendar with ready-to-buy clients
             </p>
           </motion.div>
 

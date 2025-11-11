@@ -20,22 +20,22 @@ export default function FinalClose() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 px-2 text-white">
-            Your Audience Is Already Waiting
+            Your Market Is Ready to Buy
           </h2>
 
           <p className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 md:mb-12 px-4 text-white">
-            The Only Question: Are You Ready to Monetize?
+            The Only Question: Are You Ready to Scale?
           </p>
 
           <div className="space-y-4 md:space-y-6 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
             <p className="text-base sm:text-lg md:text-xl text-white/80">
-              You've built the trust. You've created the content. You have the knowledge people need.
+              You've built the business. You've proven the model. You have clients who trust you.
             </p>
             <p className="text-base sm:text-lg md:text-xl text-white/80">
-              The creators who succeed in 2025 aren't the ones with the most followers.
+              The businesses that dominate in 2025 aren't the ones with the biggest budgets.
             </p>
             <p className="text-base sm:text-lg md:text-xl font-semibold text-white">
-              They're the ones who turn their influence into income.
+              They're the ones who build systems that generate qualified leads on autopilot.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function FinalClose() {
           </div>
 
           <p className="text-xs sm:text-sm px-4 text-white/50">
-            Full done-for-you service. Launch support included. Results guaranteed.
+            Complete done-for-you system. Weekly tracking & optimization. Real results, not vanity metrics.
           </p>
         </motion.div>
       </div>

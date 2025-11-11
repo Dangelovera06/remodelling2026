@@ -4,58 +4,58 @@ import { TestimonialsColumn } from "@/components/ui/testimonials-columns";
 
 const testimonials = [
   {
-    text: "Went from struggling with monetization to $50K in my first 60 days. Momento built everything—I just showed up with my knowledge. Life-changing.",
+    text: "P1 Creative took us from inconsistent leads to 45 qualified appointments per month. Their AI caller system alone saves us 20 hours a week. Game-changer.",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     name: "Sarah Chen",
-    role: "Fitness Creator, 45K followers",
+    role: "Med Spa Owner",
   },
   {
-    text: "Made $180K in my first launch with Momento. They handled the tech, funnels, and strategy while I focused on my audience. Best decision ever.",
+    text: "Within 60 days, P1 filled our calendar with pre-qualified leads. The cinematic videos they produce stop people mid-scroll. Best ROI we've ever seen on marketing.",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     name: "Marcus Johnson",
-    role: "Business Coach, 22K followers",
+    role: "Commercial Real Estate",
   },
   {
-    text: "Finally monetized my 8 years of content creation. Momento turned my expertise into a six-figure course in just 30 days. Unbelievable ROI.",
+    text: "We were spending $15K/month on ads with zero results. P1 Creative rebuilt our entire system and now we're booking 30+ qualified calls monthly. Worth every penny.",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
     name: "Elena Rodriguez",
-    role: "Nutrition Expert, 68K followers",
+    role: "Luxury Home Builder",
   },
   {
-    text: "I had the audience but no clue how to sell. Momento built my entire funnel and launch strategy. Hit $100K in month two.",
+    text: "The AI caller handles our inbound leads 24/7. No more missed calls, no more manual follow-ups. P1 Creative gave us back our time while doubling our bookings.",
     image: "https://randomuser.me/api/portraits/men/52.jpg",
     name: "Michael Thompson",
-    role: "Real Estate Educator, 35K followers",
+    role: "HVAC Company Owner",
   },
   {
-    text: "From zero to $75K in 45 days with Momento's done-for-you system. They made monetization effortless—I wish I'd found them years ago.",
+    text: "P1 Creative's videos are cinematic and their ads actually convert. We went from 5 leads per month to 40+ qualified appointments. Our business has completely transformed.",
     image: "https://randomuser.me/api/portraits/women/68.jpg",
     name: "Lisa Martinez",
-    role: "Mindset Coach, 15K followers",
+    role: "Plastic Surgeon",
   },
   {
-    text: "Momento transformed my side hustle into a full-time business. $250K in year one, all while they handled the heavy lifting. Incredible team.",
+    text: "Their concierge support is unmatched. Weekly KPI reports, biweekly strategy calls, and Slack access whenever we need help. They're truly invested in our success.",
     image: "https://randomuser.me/api/portraits/men/46.jpg",
     name: "David Kim",
-    role: "Tech YouTuber, 120K subscribers",
+    role: "Law Firm Partner",
   },
   {
-    text: "$320K from one course launch. Momento's system is foolproof—sales funnels, emails, everything automated. I just focus on content now.",
+    text: "P1 Creative built our landing page, launched our ads, and automated our entire follow-up process. We're now closing $200K+ per month from qualified leads they generate.",
     image: "https://randomuser.me/api/portraits/women/72.jpg",
     name: "Amanda Foster",
-    role: "Marketing Strategist, 55K followers",
+    role: "Roofing Company CEO",
   },
   {
-    text: "Turned my Instagram following into consistent $40K months. Momento did all the technical work so I could stay in my zone of genius.",
+    text: "We tried three agencies before P1 Creative. None of them delivered. P1 gave us a complete system that actually works—content, ads, booking automation, everything.",
     image: "https://randomuser.me/api/portraits/men/58.jpg",
     name: "Jason Park",
-    role: "Travel Creator, 95K followers",
+    role: "Dental Practice Owner",
   },
   {
-    text: "Best investment in my creator journey. $150K in 90 days, and Momento handled everything from course design to checkout pages. Worth every penny.",
+    text: "The custom SOPs they created for our front desk team eliminated all the confusion. Now every lead is handled perfectly and our close rate is 3x what it was.",
     image: "https://randomuser.me/api/portraits/women/79.jpg",
     name: "Jennifer Blake",
-    role: "Productivity Expert, 28K followers",
+    role: "Financial Advisor",
   },
 ];
 
@@ -86,16 +86,16 @@ export default function Testimonials() {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center mb-6">
             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
-              Real Creators.
+              Real Businesses.
             </span>
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#006eff] via-white/90 to-[#0080ff]">
-              Real Revenue.
+              Real Results.
             </span>
           </h2>
           
           <p className="text-center text-base md:text-lg text-white/50 leading-relaxed">
-            See what creators are saying about their transformation
+            See what business owners are saying about their transformation
           </p>
         </motion.div>
 

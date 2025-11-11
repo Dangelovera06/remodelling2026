@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
 const struggles = [
-  "Watching others monetize similar content while you're still figuring it out.",
-  "The frustration of building an audience but not knowing how to turn it into income.",
-  "Feeling overwhelmed by tech platforms, funnels, and marketing systems."
+  "Spending thousands on ads that generate clicks but zero qualified appointments.",
+  "Chasing leads manually because your team can't keep up with inquiries and follow-ups.",
+  "Watching competitors book out their calendars while you're stuck with inconsistent lead flow.",
+  "Hiring expensive agencies that promise results but deliver reports instead of revenue."
 ];
 
 export default function EmotionalCore() {
@@ -26,11 +27,11 @@ export default function EmotionalCore() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white">
-            You've Built the Audience. Now It's Time to Get Paid.
+            You've Built the Business. Now It's Time to Scale with Systems.
           </h2>
 
           <p className="text-lg md:text-xl mb-12 text-white/80">
-            We know the struggle creators face every day:
+            We know the struggle business owners face every day:
           </p>
 
           <div className="space-y-4 mb-12">
@@ -52,7 +53,7 @@ export default function EmotionalCore() {
 
           <div className="p-10 rounded-3xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/20">
             <p className="text-xl md:text-2xl font-semibold text-white/90">
-              Your knowledge is valuable — it's time to package it and profit from it.
+              Your business deserves a marketing system that works as hard as you do — generating leads, following up, and booking qualified appointments while you sleep.
             </p>
           </div>
         </motion.div>

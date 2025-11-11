@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 
 const steps = [
   {
-    title: "Your Knowledge Becomes a Structured Product",
-    description: "We work with you to extract and organize your expertise into a professional course or info product. No tech skills needed—we handle all curriculum design, platform setup, and content formatting.",
+    title: "Your Content Starts Converting",
+    description: "We shoot and edit 10 cinematic short-form videos per month with proven scripts that stop scrollers and turn attention into appointments. Your brand becomes impossible to ignore.",
     image: "/WHAT HAPPENS/1.webp"
   },
   {
-    title: "Your Sales Funnel Goes Live Automatically",
-    description: "We build high-converting landing pages, email sequences, and checkout flows that turn your audience into paying customers. Everything is automated and optimized for maximum conversions.",
+    title: "Your Ads Generate Qualified Leads",
+    description: "We launch and manage high-converting ad campaigns built to generate qualified leads—not vanity metrics. Every dollar is tracked, every lead is filtered, and your calendar starts filling up.",
     image: "/WHAT HAPPENS/2.webp"
   },
   {
-    title: "You Launch and Start Earning",
-    description: "With your product live and marketing systems in place, you start generating revenue from day one. We provide ongoing support and optimization to scale your income month after month.",
+    title: "Your System Runs on Autopilot",
+    description: "With AI-powered callers handling inquiries, automated booking systems pre-qualifying leads, and custom SOPs guiding your team—your business generates appointments while you focus on closing deals.",
     image: "/WHAT HAPPENS/3.webp"
   }
 ];
@@ -31,9 +31,9 @@ export default function WhatHappens() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            This is What Happens After You Join{" "}
+            This is What Happens After You Partner With{" "}
             <span className="bg-gradient-to-r from-[#006eff] via-white to-[#006eff] bg-clip-text text-transparent">
-              Momento
+              P1 Creative
             </span>
           </h2>
         </motion.div>

@@ -5,23 +5,23 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 
 const benefits = [
   {
-    title: "YOU DON'T NEED TECH SKILLS",
-    description: "Building a profitable info product doesn't require coding or technical expertise—we handle all the technical setup, platforms, and integrations so you can focus on your content and audience.",
+    title: "YOU DON'T NEED A BIG MARKETING BUDGET",
+    description: "We build your entire lead generation system from scratch—content, ads, landing pages, and follow-up automation—all optimized to generate qualified leads at the lowest possible cost.",
     icon: "/website icons/29.png"
   },
   {
-    title: "YOU DON'T NEED TO BE A COURSE CREATOR",
-    description: "Momento transforms your existing knowledge and content into structured courses and products. We handle the curriculum design, formatting, and delivery—you just provide the expertise.",
+    title: "YOU DON'T NEED TO HIRE A VIDEO TEAM",
+    description: "We shoot, edit, and script 10 cinematic short-form videos every month that stop scrollers dead in their tracks and turn attention into appointments.",
     icon: "/website icons/30.png"
   },
   {
-    title: "YOU DON'T NEED MARKETING EXPERIENCE",
-    description: "Our proven sales funnel templates convert visitors into paying customers automatically. We build email sequences, landing pages, and checkout flows that have generated millions in revenue.",
+    title: "YOU DON'T NEED TO CHASE LEADS",
+    description: "Our AI-powered caller system handles both inbound inquiries and outbound follow-ups automatically—qualifying leads, answering questions, and booking appointments 24/7.",
     icon: "/website icons/31.png"
   },
   {
-    title: "YOU DON'T NEED A MASSIVE AUDIENCE",
-    description: "With Momento, even a modest engaged following can generate serious revenue. We've helped creators with just 5,000 followers build six-figure businesses through strategic monetization.",
+    title: "YOU DON'T NEED TO FIGURE IT OUT ALONE",
+    description: "P1 Concierge Support means you have Slack access, biweekly strategy calls, and weekly KPI reports. We're in the trenches with you, optimizing every step of the way.",
     icon: "/website icons/32.png"
   }
 ];
@@ -44,15 +44,15 @@ export default function HardTruth() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
-            Stop Leaving Money on the Table
+            Stop Wasting Money on Marketing That Doesn't Convert
           </h2>
 
           <p className="text-lg sm:text-xl text-white/80 mb-4 max-w-3xl mx-auto">
-            Until now, monetizing your audience required technical skills, marketing expertise, and months of trial and error.
+            Most businesses burn through cash on ads, content, and agencies that generate vanity metrics but zero qualified leads.
           </p>
 
           <p className="text-xl sm:text-2xl font-bold text-[#006eff] mb-12 max-w-3xl mx-auto">
-            Momento handles everything so you can focus on what you do best.
+            P1 Creative builds you a complete lead-generation system that actually fills your calendar.
           </p>
 
           <div className="space-y-8 mb-12">

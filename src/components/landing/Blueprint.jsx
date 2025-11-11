@@ -5,18 +5,18 @@ import { ArrowRight, FileText, Target, TrendingUp } from "lucide-react";
 const steps = [
   {
     icon: FileText,
-    title: "Week 1: Strategy & Content",
-    description: "We map out your offer, structure your course, and extract your knowledge into organized modules and lessons."
+    title: "Week 1: Discovery & Setup",
+    description: "We map out your ideal customer, script your content, and build your custom landing page funnel. AI caller and booking system configured from day one."
   },
   {
     icon: Target,
-    title: "Week 2-3: Build & Design",
-    description: "We build your sales funnel, email sequences, checkout pages, and member portal—all ready to go."
+    title: "Week 2-3: Content & Campaigns",
+    description: "We shoot and edit your first batch of cinematic videos, launch targeted ad campaigns, and integrate all backend tools with your team's SOPs."
   },
   {
     icon: TrendingUp,
-    title: "Week 4: Launch & Scale",
-    description: "Your product goes live with a proven launch strategy. We support you until you hit your first revenue goals."
+    title: "Week 4: Optimize & Scale",
+    description: "Your system is live and generating leads. We analyze weekly KPIs, optimize what's working, and scale your best-performing content and ads."
   }
 ];
 
@@ -38,7 +38,7 @@ export default function Blueprint() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 px-4 text-white">
-            From Audience to Income in 30 Days
+            From Setup to Qualified Leads in 30 Days
           </h2>
         </motion.div>
 
