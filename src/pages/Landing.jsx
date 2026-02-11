@@ -375,6 +375,24 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* CTA Banner 1 */}
+      <section className="px-4 sm:px-6 lg:px-8 py-12 bg-[#B8860B]">
+        <div className="max-w-3xl mx-auto text-center">
+          <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white mb-4">
+            Skip the headaches. Work with pros who get it right the first time.
+          </h3>
+          <button 
+            onClick={openModal}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#2D2D2D] rounded-lg font-medium hover:bg-[#FDFBF7] transition-colors"
+          >
+            Get a Quote from Our Guaranteed Trusted Teams
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
       {/* Material Guide Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
@@ -553,6 +571,25 @@ export default function Landing() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* CTA in materials section */}
+          <div className="mt-12 p-8 bg-[#2D2D2D] rounded-xl text-center">
+            <h3 className="text-xl font-serif font-semibold text-white mb-3">
+              Not sure which material is right for you?
+            </h3>
+            <p className="text-white/70 mb-6">
+              Our experts will help you choose based on your lifestyle, budget, and design goals.
+            </p>
+            <button 
+              onClick={openModal}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#B8860B] text-white rounded-lg font-medium hover:bg-[#9a7209] transition-colors"
+            >
+              Get a Quote from Our Guaranteed Trusted Teams
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
