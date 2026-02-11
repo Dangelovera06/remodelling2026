@@ -59,7 +59,7 @@ export default function Landing() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <a href="#" className="text-xl font-serif font-semibold text-[#2D2D2D]">
-              Counter<span className="text-[#B8860B]">Tops</span>
+              countertops<span className="text-[#B8860B]">.com</span>
             </a>
             <div className="hidden md:flex items-center gap-6">
               <a href="#why-team" className="text-sm text-[#6B6B6B] hover:text-[#2D2D2D] transition-colors">Why Team Matters</a>
@@ -726,7 +726,7 @@ export default function Landing() {
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <a href="#" className="text-2xl font-serif font-semibold text-[#2D2D2D] mb-4 inline-block">
-                Counter<span className="text-[#B8860B]">Tops</span>
+                countertops<span className="text-[#B8860B]">.com</span>
               </a>
               <p className="text-[#6B6B6B] max-w-sm mb-4">
                 Certified fabricators dedicated to precision, quality, and making your dream kitchen a reality.
@@ -754,7 +754,7 @@ export default function Landing() {
           </div>
           <div className="pt-8 border-t border-[#E8E4DE] flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-[#6B6B6B]">
-              © 2026 CounterTops. All rights reserved.
+              © 2026 countertops.com. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-[#6B6B6B] hover:text-[#B8860B] transition-colors">Privacy Policy</a>
