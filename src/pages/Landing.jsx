@@ -2,50 +2,10 @@ import React, { useState } from "react";
 
 export default function Landing() {
   const [showModal, setShowModal] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    inSouthFL: '',
-    timeline: '',
-    material: ''
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [notQualified, setNotQualified] = useState(false);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
-    // Check if they're not in South FL
-    if (name === 'inSouthFL' && value === 'no') {
-      setNotQualified(true);
-    } else if (name === 'inSouthFL' && value === 'yes') {
-      setNotQualified(false);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (notQualified) return;
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-  };
 
   const openModal = (e) => {
     e.preventDefault();
     setShowModal(true);
-    setSubmitted(false);
-    setNotQualified(false);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      inSouthFL: '',
-      timeline: '',
-      material: ''
-    });
   };
 
   // Trusting green color
@@ -60,159 +20,25 @@ export default function Landing() {
             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={() => setShowModal(false)}
           />
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+          <div className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-hidden">
             <button 
               onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 text-gray-600 hover:text-black transition-colors"
+              className="absolute top-4 right-4 z-10 text-gray-600 hover:text-black transition-colors bg-white rounded-full p-1"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
-            <div className="p-8">
-              {submitted ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 bg-[#059669] rounded-full flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-serif font-semibold text-black mb-4">Thank You!</h3>
-                  <p className="text-gray-600">
-                    We've received your request. One of our countertop specialists will reach out within 24 hours.
-                  </p>
-                  <button 
-                    onClick={() => setShowModal(false)}
-                    className="mt-6 px-6 py-2 bg-black text-white rounded-lg hover:bg-[#059669] transition-colors"
-                  >
-                    Close
-                  </button>
-                </div>
-              ) : (
-                <>
-                  <h3 className="text-2xl font-serif font-semibold text-black mb-2">
-                    Get Your Free Quote
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-6">
-                    Confirm your interest and we'll connect you with a countertop specialist.
-                  </p>
-
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-black mb-1">Name *</label>
-                      <input
-                        type="text"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669]"
-                        placeholder="Your full name"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-black mb-1">Email *</label>
-                      <input
-                        type="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669]"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-black mb-1">Phone *</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        required
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669]"
-                        placeholder="(555) 123-4567"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-black mb-1">Do you live in South Florida? *</label>
-                      <select
-                        name="inSouthFL"
-                        required
-                        value={formData.inSouthFL}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] bg-white"
-                      >
-                        <option value="">Select...</option>
-                        <option value="yes">Yes, I live in South Florida</option>
-                        <option value="no">No, I live elsewhere</option>
-                      </select>
-                      {notQualified && (
-                        <p className="text-red-500 text-sm mt-2">
-                          Sorry, we currently only serve the South Florida area.
-                        </p>
-                      )}
-                    </div>
-
-                    {!notQualified && formData.inSouthFL === 'yes' && (
-                      <>
-                        <div>
-                          <label className="block text-sm font-medium text-black mb-1">When do you want to start? *</label>
-                          <select
-                            name="timeline"
-                            required
-                            value={formData.timeline}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] bg-white"
-                          >
-                            <option value="">Select timeline...</option>
-                            <option value="asap">As soon as possible</option>
-                            <option value="1-2weeks">Within 1-2 weeks</option>
-                            <option value="1month">Within a month</option>
-                            <option value="2-3months">2-3 months</option>
-                            <option value="planning">Just planning / researching</option>
-                          </select>
-                        </div>
-
-                        <div>
-                          <label className="block text-sm font-medium text-black mb-1">What material are you interested in? *</label>
-                          <select
-                            name="material"
-                            required
-                            value={formData.material}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] bg-white"
-                          >
-                            <option value="">Select material...</option>
-                            <option value="quartz">Quartz</option>
-                            <option value="granite">Granite</option>
-                            <option value="marble">Marble</option>
-                            <option value="quartzite">Quartzite</option>
-                            <option value="butcher-block">Butcher Block</option>
-                            <option value="concrete">Concrete</option>
-                            <option value="unsure">Not sure yet</option>
-                          </select>
-                        </div>
-
-                        <button
-                          type="submit"
-                          className="w-full py-4 bg-[#059669] text-white rounded-lg font-medium hover:bg-[#047857] transition-colors mt-2"
-                        >
-                          Confirm Interest & Get Quote
-                        </button>
-                      </>
-                    )}
-
-                    <p className="text-xs text-gray-600 text-center mt-4">
-                      By submitting, you agree to be contacted about your countertop project.
-                    </p>
-                  </form>
-                </>
-              )}
+            <div className="p-4">
+              {/* GoHighLevel Quiz Embed */}
+              <iframe 
+                src="https://api.leadconnectorhq.com/widget/quiz/cGpUVPZJJytrRprRUM83" 
+                style={{ border: 'none', width: '100%', minHeight: '500px' }}
+                scrolling="no" 
+                id="cGpUVPZJJytrRprRUM83" 
+                title="Get Your Free Quote"
+              ></iframe>
             </div>
           </div>
         </div>
