@@ -48,8 +48,11 @@ export default function Landing() {
     });
   };
 
+  // Trusting green color
+  const greenCTA = "bg-[#059669] hover:bg-[#047857]";
+
   return (
-    <div className="min-h-screen bg-[#FDFBF7]">
+    <div className="min-h-screen bg-white">
       {/* Quote Request Modal */}
       {showModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
@@ -60,7 +63,7 @@ export default function Landing() {
           <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
             <button 
               onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 text-[#6B6B6B] hover:text-[#2D2D2D] transition-colors"
+              className="absolute top-4 right-4 text-gray-600 hover:text-black transition-colors"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -70,79 +73,79 @@ export default function Landing() {
             <div className="p-8">
               {submitted ? (
                 <div className="text-center py-8">
-                  <div className="w-16 h-16 bg-[#7D8B75] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-[#059669] rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-serif font-semibold text-[#2D2D2D] mb-4">Thank You!</h3>
-                  <p className="text-[#6B6B6B]">
+                  <h3 className="text-2xl font-serif font-semibold text-black mb-4">Thank You!</h3>
+                  <p className="text-gray-600">
                     We've received your request. One of our countertop specialists will reach out within 24 hours.
                   </p>
                   <button 
                     onClick={() => setShowModal(false)}
-                    className="mt-6 px-6 py-2 bg-[#2D2D2D] text-white rounded-lg hover:bg-[#B8860B] transition-colors"
+                    className="mt-6 px-6 py-2 bg-black text-white rounded-lg hover:bg-[#059669] transition-colors"
                   >
                     Close
                   </button>
                 </div>
               ) : (
                 <>
-                  <h3 className="text-2xl font-serif font-semibold text-[#2D2D2D] mb-2">
+                  <h3 className="text-2xl font-serif font-semibold text-black mb-2">
                     Get Your Free Quote
                   </h3>
-                  <p className="text-[#6B6B6B] text-sm mb-6">
+                  <p className="text-gray-600 text-sm mb-6">
                     Confirm your interest and we'll connect you with a countertop specialist.
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-[#2D2D2D] mb-1">Name *</label>
+                      <label className="block text-sm font-medium text-black mb-1">Name *</label>
                       <input
                         type="text"
                         name="name"
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-[#E8E4DE] rounded-lg focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B]"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669]"
                         placeholder="Your full name"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-[#2D2D2D] mb-1">Email *</label>
+                      <label className="block text-sm font-medium text-black mb-1">Email *</label>
                       <input
                         type="email"
                         name="email"
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-[#E8E4DE] rounded-lg focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B]"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669]"
                         placeholder="your@email.com"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-[#2D2D2D] mb-1">Phone *</label>
+                      <label className="block text-sm font-medium text-black mb-1">Phone *</label>
                       <input
                         type="tel"
                         name="phone"
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-[#E8E4DE] rounded-lg focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B]"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669]"
                         placeholder="(555) 123-4567"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-[#2D2D2D] mb-1">Do you live in South Florida? *</label>
+                      <label className="block text-sm font-medium text-black mb-1">Do you live in South Florida? *</label>
                       <select
                         name="inSouthFL"
                         required
                         value={formData.inSouthFL}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-[#E8E4DE] rounded-lg focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] bg-white"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] bg-white"
                       >
                         <option value="">Select...</option>
                         <option value="yes">Yes, I live in South Florida</option>
@@ -158,13 +161,13 @@ export default function Landing() {
                     {!notQualified && formData.inSouthFL === 'yes' && (
                       <>
                         <div>
-                          <label className="block text-sm font-medium text-[#2D2D2D] mb-1">When do you want to start? *</label>
+                          <label className="block text-sm font-medium text-black mb-1">When do you want to start? *</label>
                           <select
                             name="timeline"
                             required
                             value={formData.timeline}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-[#E8E4DE] rounded-lg focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] bg-white"
+                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] bg-white"
                           >
                             <option value="">Select timeline...</option>
                             <option value="asap">As soon as possible</option>
@@ -176,13 +179,13 @@ export default function Landing() {
                         </div>
 
                         <div>
-                          <label className="block text-sm font-medium text-[#2D2D2D] mb-1">What material are you interested in? *</label>
+                          <label className="block text-sm font-medium text-black mb-1">What material are you interested in? *</label>
                           <select
                             name="material"
                             required
                             value={formData.material}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-3 border border-[#E8E4DE] rounded-lg focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] bg-white"
+                            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[#059669] focus:ring-1 focus:ring-[#059669] bg-white"
                           >
                             <option value="">Select material...</option>
                             <option value="quartz">Quartz</option>
@@ -197,14 +200,14 @@ export default function Landing() {
 
                         <button
                           type="submit"
-                          className="w-full py-4 bg-[#B8860B] text-white rounded-lg font-medium hover:bg-[#9a7209] transition-colors mt-2"
+                          className="w-full py-4 bg-[#059669] text-white rounded-lg font-medium hover:bg-[#047857] transition-colors mt-2"
                         >
                           Confirm Interest & Get Quote
                         </button>
                       </>
                     )}
 
-                    <p className="text-xs text-[#6B6B6B] text-center mt-4">
+                    <p className="text-xs text-gray-600 text-center mt-4">
                       By submitting, you agree to be contacted about your countertop project.
                     </p>
                   </form>
@@ -216,13 +219,13 @@ export default function Landing() {
       )}
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FDFBF7]/95 backdrop-blur-sm border-b border-[#E8E4DE]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <a href="#" className="text-xl font-serif font-semibold text-[#2D2D2D]">
-              countertops<span className="text-[#B8860B]">.com</span>
+            <a href="#" className="text-xl font-serif font-semibold text-black">
+              countertops<span className="text-[#059669]">.com</span>
             </a>
-            <button onClick={openModal} className="text-sm text-[#B8860B] font-medium hover:underline">
+            <button onClick={openModal} className="text-sm text-[#059669] font-medium hover:underline">
               Get Expert Help →
             </button>
           </div>
@@ -233,18 +236,18 @@ export default function Landing() {
       <header className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           {/* Social Proof Badge */}
-          <div className="flex items-center gap-2 mb-5">
-            <div className="flex -space-x-1.5">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-[#FDFBF7] object-cover" />
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-[#FDFBF7] object-cover" />
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-[#FDFBF7] object-cover" />
+          <div className="flex items-center gap-3 mb-6">
+            <div className="flex -space-x-2">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm" />
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-sm" />
             </div>
-            <p className="text-xs text-[#B8860B] font-medium">+ Join over 350 homeowners</p>
+            <p className="text-sm text-[#059669] font-semibold">+ Join over 350 homeowners</p>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#2D2D2D] mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-black mb-8 leading-tight">
             One wrong countertop decision can cost you $3,000+.<br />
-            <span className="text-[#6B6B6B]">Here's how to avoid it.</span>
+            <span className="text-gray-600">Here's how to avoid it.</span>
           </h1>
         </div>
       </header>
@@ -252,17 +255,17 @@ export default function Landing() {
       {/* Pain Points */}
       <section className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-4 text-lg text-[#2D2D2D]">
+          <div className="space-y-4 text-lg text-black">
             <p className="flex items-start gap-3">
-              <span className="text-[#7D8B75] mt-1">✓</span>
+              <span className="text-[#059669] mt-1">✓</span>
               No more late-night Googling "granite vs quartz"
             </p>
             <p className="flex items-start gap-3">
-              <span className="text-[#7D8B75] mt-1">✓</span>
+              <span className="text-[#059669] mt-1">✓</span>
               No more pretending you understand edge profiles and seam placement
             </p>
             <p className="flex items-start gap-3">
-              <span className="text-[#7D8B75] mt-1">✓</span>
+              <span className="text-[#059669] mt-1">✓</span>
               No more costly "I didn't know that was a decision" moments
             </p>
           </div>
@@ -285,12 +288,12 @@ export default function Landing() {
       {/* The Problem Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#2D2D2D] mb-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-black mb-8">
             You don't realize how many countertop decisions fall on you until your contractor starts asking questions you can't answer.
           </h2>
           
-          <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed">
-            <p className="italic border-l-4 border-[#B8860B] pl-6 text-[#2D2D2D]">
+          <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+            <p className="italic border-l-4 border-[#059669] pl-6 text-black">
               "What edge profile do you want?"<br />
               "What's your overhang preference?"<br />
               "Undermount or drop-in sink?"<br />
@@ -317,14 +320,14 @@ export default function Landing() {
             </div>
 
             <p>
-              <strong className="text-[#2D2D2D]">You're behind because no one told you what decisions actually matter</strong> — or when your fabricator expects them.
+              <strong className="text-black">You're behind because no one told you what decisions actually matter</strong> — or when your fabricator expects them.
             </p>
 
             {/* CTA */}
             <div className="pt-8">
               <button 
                 onClick={openModal}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#B8860B] text-white rounded-lg font-medium hover:bg-[#9a7209] transition-colors text-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#059669] text-white rounded-lg font-medium hover:bg-[#047857] transition-colors text-sm"
               >
                 Get a Quote from Our Guaranteed Trusted Teams
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -339,73 +342,73 @@ export default function Landing() {
       {/* Real Mistakes Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#2D2D2D] mb-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-black mb-4">
             Every day countertop mistakes...
           </h2>
-          <p className="text-lg text-[#6B6B6B] mb-10">
+          <p className="text-lg text-gray-600 mb-10">
             These aren't rookie mistakes—they're common ones. They happen every day, even on jobs with pros involved.
           </p>
 
           <div className="space-y-8">
-            <div className="bg-white rounded-xl p-6 border border-[#E8E4DE]">
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">Edge profile not specified</h3>
-              <p className="text-[#6B6B6B]">
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="font-semibold text-black mb-2">Edge profile not specified</h3>
+              <p className="text-gray-600">
                 → Fabricator installs with their default bullnose, but you wanted an eased edge. Too late—it's already cut and polished.
               </p>
               <p className="text-sm text-red-500 mt-2">Cost to fix: $1,200 - $3,000 for re-fabrication</p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-[#E8E4DE]">
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">Sink cutout measured wrong</h3>
-              <p className="text-[#6B6B6B]">
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="font-semibold text-black mb-2">Sink cutout measured wrong</h3>
+              <p className="text-gray-600">
                 → The undermount sink you ordered doesn't fit the cutout. Now you're choosing between a different sink or a new slab.
               </p>
               <p className="text-sm text-red-500 mt-2">Cost to fix: $800 - $5,000+</p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-[#E8E4DE]">
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">Seam placement not discussed</h3>
-              <p className="text-[#6B6B6B]">
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="font-semibold text-black mb-2">Seam placement not discussed</h3>
+              <p className="text-gray-600">
                 → Your beautiful island now has a seam running right down the middle where everyone can see it. The fabricator put it where it was easiest, not where it looked best.
               </p>
               <p className="text-sm text-red-500 mt-2">Cost to fix: Live with it or $4,000+ for new slab</p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-[#E8E4DE]">
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">Wrong thickness ordered</h3>
-              <p className="text-[#6B6B6B]">
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="font-semibold text-black mb-2">Wrong thickness ordered</h3>
+              <p className="text-gray-600">
                 → You wanted the chunky 3cm look but the quote was for 2cm. Now you're either paying the upgrade fee or living with thinner counters than you imagined.
               </p>
               <p className="text-sm text-red-500 mt-2">Cost to fix: $500 - $2,000 upgrade fee</p>
             </div>
           </div>
 
-          <p className="text-center text-[#6B6B6B] mt-10 italic">
+          <p className="text-center text-gray-600 mt-10 italic">
             The cost? Reorders, delays, added labor, and compromising on the design you wanted.
           </p>
         </div>
       </section>
 
       {/* Testimonial Break */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 bg-[#2D2D2D]">
+      <section className="px-4 sm:px-6 lg:px-8 py-12 bg-black">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xl text-white italic mb-6">
             "I didn't know I needed to specify the countertop radius. I wanted a rounded edge corner to match the curves in my design. 
             The fabricator said they don't usually do that—if I hadn't asked, I would've gotten square corners on everything."
           </p>
-          <p className="text-[#B8860B]">— Janet T., Olathe KS</p>
+          <p className="text-[#059669]">— Janet T., Olathe KS</p>
         </div>
       </section>
 
       {/* CTA Banner 1 */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 bg-[#B8860B]">
+      <section className="px-4 sm:px-6 lg:px-8 py-12 bg-[#059669]">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-xl sm:text-2xl font-serif font-semibold text-white mb-4">
             Skip the headaches. Work with pros who get it right the first time.
           </h3>
           <button 
             onClick={openModal}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#2D2D2D] rounded-lg font-medium hover:bg-[#FDFBF7] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-white transition-colors"
           >
             Get a Quote from Our Guaranteed Trusted Teams
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -418,37 +421,37 @@ export default function Landing() {
       {/* Material Guide Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#2D2D2D] mb-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-black mb-4">
             Know every material decision before you talk to anyone.
           </h2>
-          <p className="text-lg text-[#6B6B6B] mb-12">
+          <p className="text-lg text-gray-600 mb-12">
             Here's what you actually need to understand about each countertop material—the real pros, cons, and installation implications that matter.
           </p>
 
           {/* Granite */}
-          <div className="mb-12 pb-12 border-b border-[#E8E4DE]">
+          <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="md:flex gap-8 items-start">
               <div className="md:w-1/3 mb-6 md:mb-0">
                 <img src="/materials/granite.png" alt="Granite countertop" className="rounded-lg w-full" />
               </div>
               <div className="md:w-2/3">
-                <h3 className="text-xl font-serif font-semibold text-[#2D2D2D] mb-2">Granite</h3>
-                <p className="text-sm text-[#B8860B] mb-4">$50-200/sq ft installed</p>
-                <p className="text-[#6B6B6B] mb-4">
+                <h3 className="text-xl font-serif font-semibold text-black mb-2">Granite</h3>
+                <p className="text-sm text-[#059669] mb-4">$50-200/sq ft installed</p>
+                <p className="text-gray-600 mb-4">
                   Natural stone quarried from the earth. Every slab is unique—which is beautiful, but means you need to select your actual slab in person. Photos won't match.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What's great:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What's great:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Extremely heat resistant</li>
                       <li>• Each slab is one-of-a-kind</li>
                       <li>• Lasts 50+ years</li>
                     </ul>
                   </div>
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What to know:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What to know:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Needs sealing annually</li>
                       <li>• Very heavy—cabinets need support</li>
                       <li>• Some patterns look "busy"</li>
@@ -460,29 +463,29 @@ export default function Landing() {
           </div>
 
           {/* Quartz */}
-          <div className="mb-12 pb-12 border-b border-[#E8E4DE]">
+          <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="md:flex gap-8 items-start">
               <div className="md:w-1/3 mb-6 md:mb-0">
                 <img src="/materials/quartz.png" alt="Quartz countertop" className="rounded-lg w-full" />
               </div>
               <div className="md:w-2/3">
-                <h3 className="text-xl font-serif font-semibold text-[#2D2D2D] mb-2">Quartz</h3>
-                <p className="text-sm text-[#B8860B] mb-4">$60-150/sq ft installed</p>
-                <p className="text-[#6B6B6B] mb-4">
+                <h3 className="text-xl font-serif font-semibold text-black mb-2">Quartz</h3>
+                <p className="text-sm text-[#059669] mb-4">$60-150/sq ft installed</p>
+                <p className="text-gray-600 mb-4">
                   Engineered stone made from crushed quartz and resin. Consistent patterns, non-porous, and extremely low maintenance. The most popular choice for modern kitchens.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What's great:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What's great:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Never needs sealing</li>
                       <li>• Stain resistant</li>
                       <li>• Consistent look slab-to-slab</li>
                     </ul>
                   </div>
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What to know:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What to know:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• NOT heat resistant—use trivets</li>
                       <li>• Can look "manufactured"</li>
                       <li>• Not great for outdoor use</li>
@@ -494,29 +497,29 @@ export default function Landing() {
           </div>
 
           {/* Marble */}
-          <div className="mb-12 pb-12 border-b border-[#E8E4DE]">
+          <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="md:flex gap-8 items-start">
               <div className="md:w-1/3 mb-6 md:mb-0">
                 <img src="/materials/marble.png" alt="Marble countertop" className="rounded-lg w-full" />
               </div>
               <div className="md:w-2/3">
-                <h3 className="text-xl font-serif font-semibold text-[#2D2D2D] mb-2">Marble</h3>
-                <p className="text-sm text-[#B8860B] mb-4">$75-250/sq ft installed</p>
-                <p className="text-[#6B6B6B] mb-4">
+                <h3 className="text-xl font-serif font-semibold text-black mb-2">Marble</h3>
+                <p className="text-sm text-[#059669] mb-4">$75-250/sq ft installed</p>
+                <p className="text-gray-600 mb-4">
                   The classic luxury choice. Stunning veining, cool surface perfect for baking, and timeless elegance. But it requires commitment to maintenance.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What's great:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What's great:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Unmatched beauty</li>
                       <li>• Cool surface for pastry</li>
                       <li>• Increases home value</li>
                     </ul>
                   </div>
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What to know:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What to know:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Stains easily (wine, lemon, tomato)</li>
                       <li>• Scratches and etches</li>
                       <li>• High maintenance lifestyle</li>
@@ -528,29 +531,29 @@ export default function Landing() {
           </div>
 
           {/* Butcher Block */}
-          <div className="mb-12 pb-12 border-b border-[#E8E4DE]">
+          <div className="mb-12 pb-12 border-b border-gray-200">
             <div className="md:flex gap-8 items-start">
               <div className="md:w-1/3 mb-6 md:mb-0">
                 <img src="/materials/butcher-block.png" alt="Butcher block countertop" className="rounded-lg w-full" />
               </div>
               <div className="md:w-2/3">
-                <h3 className="text-xl font-serif font-semibold text-[#2D2D2D] mb-2">Butcher Block</h3>
-                <p className="text-sm text-[#B8860B] mb-4">$40-100/sq ft installed</p>
-                <p className="text-[#6B6B6B] mb-4">
+                <h3 className="text-xl font-serif font-semibold text-black mb-2">Butcher Block</h3>
+                <p className="text-sm text-[#059669] mb-4">$40-100/sq ft installed</p>
+                <p className="text-gray-600 mb-4">
                   Warm, natural wood that brings character to any kitchen. Can be sanded and refinished when damaged. Popular in farmhouse and transitional designs.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What's great:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What's great:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Warm, inviting aesthetic</li>
                       <li>• Can be sanded and refinished</li>
                       <li>• More affordable</li>
                     </ul>
                   </div>
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What to know:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What to know:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Needs regular oiling</li>
                       <li>• Can harbor bacteria near sink</li>
                       <li>• Water damage around sink area</li>
@@ -568,23 +571,23 @@ export default function Landing() {
                 <img src="/materials/concrete.png" alt="Concrete countertop" className="rounded-lg w-full" />
               </div>
               <div className="md:w-2/3">
-                <h3 className="text-xl font-serif font-semibold text-[#2D2D2D] mb-2">Concrete</h3>
-                <p className="text-sm text-[#B8860B] mb-4">$70-150/sq ft installed</p>
-                <p className="text-[#6B6B6B] mb-4">
+                <h3 className="text-xl font-serif font-semibold text-black mb-2">Concrete</h3>
+                <p className="text-sm text-[#059669] mb-4">$70-150/sq ft installed</p>
+                <p className="text-gray-600 mb-4">
                   Fully customizable—any color, any shape, integrated sinks and drainboards. Industrial-modern aesthetic. Can be cast on-site or pre-fabricated.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What's great:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What's great:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Totally custom shapes/colors</li>
                       <li>• Integrated sinks possible</li>
                       <li>• Unique industrial look</li>
                     </ul>
                   </div>
                   <div>
-                    <p className="font-medium text-[#2D2D2D] mb-2">What to know:</p>
-                    <ul className="space-y-1 text-[#6B6B6B]">
+                    <p className="font-medium text-black mb-2">What to know:</p>
+                    <ul className="space-y-1 text-gray-600">
                       <li>• Requires sealing</li>
                       <li>• Can develop hairline cracks</li>
                       <li>• Very heavy</li>
@@ -596,7 +599,7 @@ export default function Landing() {
           </div>
 
           {/* CTA in materials section */}
-          <div className="mt-12 p-8 bg-[#2D2D2D] rounded-xl text-center">
+          <div className="mt-12 p-8 bg-black rounded-xl text-center">
             <h3 className="text-xl font-serif font-semibold text-white mb-3">
               Not sure which material is right for you?
             </h3>
@@ -605,7 +608,7 @@ export default function Landing() {
             </p>
             <button 
               onClick={openModal}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#B8860B] text-white rounded-lg font-medium hover:bg-[#9a7209] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#059669] text-white rounded-lg font-medium hover:bg-[#047857] transition-colors"
             >
               Get a Quote from Our Guaranteed Trusted Teams
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -619,61 +622,61 @@ export default function Landing() {
       {/* Decisions You Need to Make */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#2D2D2D] mb-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-black mb-4">
             The decisions your fabricator expects you to have made
           </h2>
-          <p className="text-lg text-[#6B6B6B] mb-10">
+          <p className="text-lg text-gray-600 mb-10">
             Before anyone can give you an accurate quote, you need answers to these questions. If you don't have them, you'll get three bids that are $5,000 apart—and you won't know why.
           </p>
 
           <div className="space-y-8">
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">1. Material type</h3>
-              <p className="text-[#6B6B6B]">Granite, quartz, marble, etc. This affects everything else.</p>
+              <h3 className="font-semibold text-black mb-2">1. Material type</h3>
+              <p className="text-gray-600">Granite, quartz, marble, etc. This affects everything else.</p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">2. Slab thickness</h3>
-              <p className="text-[#6B6B6B]">2cm (thinner, often needs plywood backing) or 3cm (thicker, more substantial look). This changes the price significantly.</p>
+              <h3 className="font-semibold text-black mb-2">2. Slab thickness</h3>
+              <p className="text-gray-600">2cm (thinner, often needs plywood backing) or 3cm (thicker, more substantial look). This changes the price significantly.</p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">3. Edge profile</h3>
-              <p className="text-[#6B6B6B]">Eased, beveled, bullnose, ogee, waterfall... there are 15+ options. Each has a different look and some cost more than others.</p>
+              <h3 className="font-semibold text-black mb-2">3. Edge profile</h3>
+              <p className="text-gray-600">Eased, beveled, bullnose, ogee, waterfall... there are 15+ options. Each has a different look and some cost more than others.</p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">4. Sink type and mounting</h3>
-              <p className="text-[#6B6B6B]">Undermount, drop-in, farmhouse? This affects the cutout and how the countertop is fabricated around it.</p>
+              <h3 className="font-semibold text-black mb-2">4. Sink type and mounting</h3>
+              <p className="text-gray-600">Undermount, drop-in, farmhouse? This affects the cutout and how the countertop is fabricated around it.</p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">5. Backsplash height</h3>
-              <p className="text-[#6B6B6B]">4" standard splash, full-height slab, or tile? If slab, it comes from your countertop material and costs extra.</p>
+              <h3 className="font-semibold text-black mb-2">5. Backsplash height</h3>
+              <p className="text-gray-600">4" standard splash, full-height slab, or tile? If slab, it comes from your countertop material and costs extra.</p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">6. Seam placement preferences</h3>
-              <p className="text-[#6B6B6B]">Where the slabs join matters for appearance. Discuss this BEFORE templating, not after.</p>
+              <h3 className="font-semibold text-black mb-2">6. Seam placement preferences</h3>
+              <p className="text-gray-600">Where the slabs join matters for appearance. Discuss this BEFORE templating, not after.</p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">7. Cooktop and faucet cutouts</h3>
-              <p className="text-[#6B6B6B]">These need to be selected BEFORE templating. The fabricator needs exact dimensions.</p>
+              <h3 className="font-semibold text-black mb-2">7. Cooktop and faucet cutouts</h3>
+              <p className="text-gray-600">These need to be selected BEFORE templating. The fabricator needs exact dimensions.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Another Testimonial */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 bg-[#FDFBF7]">
+      <section className="px-4 sm:px-6 lg:px-8 py-12 bg-white">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-xl p-8 border border-[#E8E4DE]">
-            <p className="text-lg text-[#2D2D2D] italic mb-6">
+          <div className="bg-white rounded-xl p-8 border border-gray-200">
+            <p className="text-lg text-black italic mb-6">
               "I didn't realize the sink had to be picked so early. When I shared the undermount sink I wanted, the countertop template was already done! 
               Thankfully, the fabricator caught it before cutting—but if they hadn't, it would've meant a new slab. At least $2,500."
             </p>
-            <p className="text-[#B8860B]">— Daniella S., Hoffman Estates IL</p>
+            <p className="text-[#059669]">— Daniella S., Hoffman Estates IL</p>
           </div>
         </div>
       </section>
@@ -681,58 +684,58 @@ export default function Landing() {
       {/* Finding the Right Team */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#2D2D2D] mb-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-black mb-4">
             It's not just materials—it's who installs them.
           </h2>
-          <p className="text-lg text-[#6B6B6B] mb-10">
+          <p className="text-lg text-gray-600 mb-10">
             Even expensive stone can be ruined by the wrong fabricator. Here's what separates professionals from everyone else.
           </p>
 
-          <div className="space-y-6 text-[#6B6B6B]">
+          <div className="space-y-6 text-gray-600">
             <div className="flex gap-4">
-              <span className="text-[#7D8B75] text-xl">✓</span>
+              <span className="text-[#059669] text-xl">✓</span>
               <div>
-                <p className="font-medium text-[#2D2D2D]">They use digital templating</p>
+                <p className="font-medium text-black">They use digital templating</p>
                 <p className="text-sm">Laser measuring captures exact dimensions. Cardboard templates are outdated and less accurate.</p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <span className="text-[#7D8B75] text-xl">✓</span>
+              <span className="text-[#059669] text-xl">✓</span>
               <div>
-                <p className="font-medium text-[#2D2D2D]">They have CNC cutting equipment</p>
+                <p className="font-medium text-black">They have CNC cutting equipment</p>
                 <p className="text-sm">Computer-controlled cuts are precise to 1/16". Manual cutting can't match this accuracy.</p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <span className="text-[#7D8B75] text-xl">✓</span>
+              <span className="text-[#059669] text-xl">✓</span>
               <div>
-                <p className="font-medium text-[#2D2D2D]">They let you select your actual slab</p>
+                <p className="font-medium text-black">They let you select your actual slab</p>
                 <p className="text-sm">For natural stone, you should visit and pick your exact slab. What you see in samples may not match.</p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <span className="text-[#7D8B75] text-xl">✓</span>
+              <span className="text-[#059669] text-xl">✓</span>
               <div>
-                <p className="font-medium text-[#2D2D2D]">They have their own installation team</p>
+                <p className="font-medium text-black">They have their own installation team</p>
                 <p className="text-sm">Not subcontractors. Their employees do the install, so accountability is clear.</p>
               </div>
             </div>
 
             <div className="flex gap-4">
-              <span className="text-[#7D8B75] text-xl">✓</span>
+              <span className="text-[#059669] text-xl">✓</span>
               <div>
-                <p className="font-medium text-[#2D2D2D]">They provide a workmanship warranty</p>
+                <p className="font-medium text-black">They provide a workmanship warranty</p>
                 <p className="text-sm">Material warranties are from manufacturers. Workmanship warranties mean they stand behind their own work.</p>
               </div>
             </div>
           </div>
 
           <div className="mt-12 p-6 bg-red-50 rounded-xl border border-red-100">
-            <h3 className="font-semibold text-[#2D2D2D] mb-4">Red flags to watch for:</h3>
-            <div className="grid sm:grid-cols-2 gap-3 text-sm text-[#6B6B6B]">
+            <h3 className="font-semibold text-black mb-4">Red flags to watch for:</h3>
+            <div className="grid sm:grid-cols-2 gap-3 text-sm text-gray-600">
               <p className="flex items-start gap-2"><span className="text-red-400">✕</span> Prices way below competitors</p>
               <p className="flex items-start gap-2"><span className="text-red-400">✕</span> No showroom or facility to visit</p>
               <p className="flex items-start gap-2"><span className="text-red-400">✕</span> Won't show you the actual slab</p>
@@ -747,49 +750,49 @@ export default function Landing() {
       {/* FAQ Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 bg-white">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#2D2D2D] mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-black mb-10">
             Frequently Asked Questions
           </h2>
 
           <div className="space-y-8">
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">How long does countertop installation take?</h3>
-              <p className="text-[#6B6B6B]">
+              <h3 className="font-semibold text-black mb-2">How long does countertop installation take?</h3>
+              <p className="text-gray-600">
                 From template to installation is typically 2-3 weeks. The actual installation day usually takes 2-4 hours for a standard kitchen. Rush jobs often mean mistakes.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">Do I need to have my sink before templating?</h3>
-              <p className="text-[#6B6B6B]">
+              <h3 className="font-semibold text-black mb-2">Do I need to have my sink before templating?</h3>
+              <p className="text-gray-600">
                 Yes. The fabricator needs your exact sink on-site (or exact specs) to template the cutout correctly. This is one of the most common mistakes homeowners make.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">What's the difference between 2cm and 3cm thickness?</h3>
-              <p className="text-[#6B6B6B]">
+              <h3 className="font-semibold text-black mb-2">What's the difference between 2cm and 3cm thickness?</h3>
+              <p className="text-gray-600">
                 3cm (about 1.25") is thicker and doesn't require plywood support underneath. 2cm (about ¾") is thinner, costs less, but needs plywood backing. 3cm has a more substantial, luxury look.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">Is quartz or granite better?</h3>
-              <p className="text-[#6B6B6B]">
+              <h3 className="font-semibold text-black mb-2">Is quartz or granite better?</h3>
+              <p className="text-gray-600">
                 Neither is universally "better." Quartz is easier to maintain and consistent in appearance. Granite is more heat-resistant and each slab is unique. It depends on your priorities and lifestyle.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">Can I put hot pans on quartz?</h3>
-              <p className="text-[#6B6B6B]">
+              <h3 className="font-semibold text-black mb-2">Can I put hot pans on quartz?</h3>
+              <p className="text-gray-600">
                 No. Despite being called "engineered stone," quartz contains resin that can be damaged by heat. Always use trivets. Granite is much more heat-tolerant.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold text-[#2D2D2D] mb-2">How do I know if my quote is fair?</h3>
-              <p className="text-[#6B6B6B]">
+              <h3 className="font-semibold text-black mb-2">How do I know if my quote is fair?</h3>
+              <p className="text-gray-600">
                 Get 3 quotes with identical specs. If your specs aren't complete, fabricators fill in the blanks differently—making comparison impossible. That's why understanding decisions matters.
               </p>
             </div>
@@ -800,15 +803,15 @@ export default function Landing() {
       {/* CTA Section */}
       <section id="get-help" className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-[#2D2D2D] mb-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-black mb-4">
             Ready to get started?
           </h2>
-          <p className="text-lg text-[#6B6B6B] mb-8 max-w-xl mx-auto">
+          <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
             Get a free quote from our South Florida countertop specialists—no pressure, no obligation. Just real answers from people who do this every day.
           </p>
           <button 
             onClick={openModal}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#2D2D2D] text-white rounded-lg font-medium hover:bg-[#B8860B] transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white rounded-lg font-medium hover:bg-[#059669] transition-colors"
           >
             Get Your Free Quote
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -819,15 +822,15 @@ export default function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="px-4 sm:px-6 lg:px-8 py-12 border-t border-[#E8E4DE]">
+      <footer className="px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-200">
         <div className="max-w-3xl mx-auto text-center">
-          <a href="#" className="text-xl font-serif font-semibold text-[#2D2D2D] mb-4 inline-block">
-            countertops<span className="text-[#B8860B]">.com</span>
+          <a href="#" className="text-xl font-serif font-semibold text-black mb-4 inline-block">
+            countertops<span className="text-[#059669]">.com</span>
           </a>
-          <p className="text-[#6B6B6B] text-sm mb-6">
+          <p className="text-gray-600 text-sm mb-6">
             Helping homeowners make better countertop decisions.
           </p>
-          <p className="text-xs text-[#6B6B6B]">
+          <p className="text-xs text-gray-600">
             © 2026 countertops.com. All rights reserved.
           </p>
         </div>
