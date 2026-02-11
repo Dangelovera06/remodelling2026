@@ -232,7 +232,30 @@ export default function Landing() {
       {/* Hero - Problem Focused */}
       <header className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[#B8860B] uppercase tracking-widest text-sm mb-6">Kitchen Countertop Guide</p>
+          {/* Social Proof Badge */}
+          <div className="flex items-center gap-3 mb-6">
+            <div className="flex -space-x-2">
+              <img 
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" 
+                alt="Homeowner" 
+                className="w-10 h-10 rounded-full border-2 border-white object-cover"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" 
+                alt="Homeowner" 
+                className="w-10 h-10 rounded-full border-2 border-white object-cover"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" 
+                alt="Homeowner" 
+                className="w-10 h-10 rounded-full border-2 border-white object-cover"
+              />
+            </div>
+            <p className="text-sm text-[#6B6B6B]">
+              <span className="text-[#B8860B] font-medium">+ Join over 350 homeowners</span>
+            </p>
+          </div>
+
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#2D2D2D] mb-8 leading-tight">
             One wrong countertop decision can cost you $3,000+.<br />
             <span className="text-[#6B6B6B]">Here's how to avoid it.</span>
