@@ -125,12 +125,11 @@ export default function Landing() {
       </section>
 
       {/* The Problem - Horror Stories */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-[#2D2D2D]">
+      <section className="px-4 sm:px-6 lg:px-8 py-20 bg-[#2D2D2D]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-[#B8860B] uppercase tracking-widest text-sm mb-4">The Hard Truth</p>
-            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-white mb-4">
-              What Happens When You Choose the Wrong Team
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-[#B8860B]">
+              The Hard Truth
             </h2>
           </div>
           
