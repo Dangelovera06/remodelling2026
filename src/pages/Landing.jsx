@@ -233,27 +233,13 @@ export default function Landing() {
       <header className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           {/* Social Proof Badge */}
-          <div className="flex items-center gap-3 mb-6">
-            <div className="flex -space-x-2">
-              <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" 
-                alt="Homeowner" 
-                className="w-10 h-10 rounded-full border-2 border-white object-cover"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" 
-                alt="Homeowner" 
-                className="w-10 h-10 rounded-full border-2 border-white object-cover"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" 
-                alt="Homeowner" 
-                className="w-10 h-10 rounded-full border-2 border-white object-cover"
-              />
+          <div className="flex items-center gap-2 mb-5">
+            <div className="flex -space-x-1.5">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-[#FDFBF7] object-cover" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-[#FDFBF7] object-cover" />
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-[#FDFBF7] object-cover" />
             </div>
-            <p className="text-sm text-[#6B6B6B]">
-              <span className="text-[#B8860B] font-medium">+ Join over 350 homeowners</span>
-            </p>
+            <p className="text-xs text-[#B8860B] font-medium">+ Join over 350 homeowners</p>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#2D2D2D] mb-8 leading-tight">
@@ -333,6 +319,16 @@ export default function Landing() {
             <p>
               <strong className="text-[#2D2D2D]">You're behind because no one told you what decisions actually matter</strong> — or when your fabricator expects them.
             </p>
+
+            {/* Social Proof */}
+            <div className="flex items-center gap-2 pt-6">
+              <div className="flex -space-x-1.5">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-white object-cover" />
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-white object-cover" />
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-white object-cover" />
+              </div>
+              <p className="text-xs text-[#B8860B] font-medium">+ Join over 350 homeowners</p>
+            </div>
           </div>
         </div>
       </section>
