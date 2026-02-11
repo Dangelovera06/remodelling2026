@@ -320,14 +320,17 @@ export default function Landing() {
               <strong className="text-[#2D2D2D]">You're behind because no one told you what decisions actually matter</strong> — or when your fabricator expects them.
             </p>
 
-            {/* Social Proof */}
-            <div className="flex items-center gap-2 pt-6">
-              <div className="flex -space-x-1.5">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-white object-cover" />
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-white object-cover" />
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=60&h=60&fit=crop&crop=face" alt="" className="w-7 h-7 rounded-full border-2 border-white object-cover" />
-              </div>
-              <p className="text-xs text-[#B8860B] font-medium">+ Join over 350 homeowners</p>
+            {/* CTA */}
+            <div className="pt-8">
+              <button 
+                onClick={openModal}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#B8860B] text-white rounded-lg font-medium hover:bg-[#9a7209] transition-colors text-sm"
+              >
+                Get a Quote from Our Guaranteed Trusted Teams
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
