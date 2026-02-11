@@ -81,8 +81,7 @@ export default function Landing() {
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-[#B8860B] uppercase tracking-widest text-sm mb-4">The #1 Factor Most Homeowners Overlook</p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold text-[#2D2D2D] mb-6 leading-tight">
-            Your Countertop Is Only As Good<br />
-            <span className="text-[#B8860B]">As The Team Who Installs It</span>
+            Your Countertop Is Only As Good As<br /><span className="text-[#B8860B]">The Team Who Installs It</span>
           </h1>
           <p className="text-lg sm:text-xl text-[#6B6B6B] max-w-3xl mx-auto mb-8">
             Beautiful materials mean nothing without skilled hands. Learn why choosing the right fabrication team is the most critical decision in your kitchen remodel—and how to avoid costly mistakes.
